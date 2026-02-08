@@ -1,9 +1,10 @@
 const { response } = require("express");
 const mongoose = require("mongoose");
 
+// function to connect to mongoDB Atlas
 async function connectDB() {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(process.env.MONGO_URI);
     console.log("Success: Connected to MngoDB Atlas");
   } catch (error) {
     console.log("Error: connection error:", error.message);
