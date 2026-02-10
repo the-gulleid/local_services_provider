@@ -1,4 +1,5 @@
 const User = require("../models/usersModel");
+const bcrypt = require("bcrypt");
 
 const getAllUsers = async (req, res) => {
   try {
@@ -57,20 +58,28 @@ const createUser = async (req, res) => {
         data: [],
       });
     }
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
     const newUser = await User.create({
       id,
       name,
       email,
-      password,
+      password: hashedPassword,
       role,
       service,
       price,
       description,
     });
+
+    const userResponse = newUser.toObject();
+    delete userResponse.password;
+
     res.status(200).json({
       success: true,
       message: "Success creating new user",
-      data: newUser,
+      data: userResponse,
     });
   } catch (error) {
     res.status(400).json({
@@ -86,6 +95,11 @@ const updateUser = async (req, res) => {
     const { id } = req.params;
     const updateData = { ...req.body };
 
+    delete updateData.rating;
+    delete updateData.aproved;
+    delete updateData.id;
+    delete updateData.banned;
+
     if (Object.keys(updateData).length === 0) {
       return res.status(400).json({
         success: false,
@@ -94,11 +108,16 @@ const updateUser = async (req, res) => {
       });
     }
 
+    if (updateData.password) {
+      const salt = await bcrypt.genSalt(10);
+      updateData.password = await bcrypt.hash(updateData.password, salt);
+    }
+
     const user = await User.findOneAndUpdate({ id }, updateData, {
       new: true,
       runValidators: true,
       context: "query",
-    });
+    }).select("-password");
 
     if (!user) {
       return res.status(404).json({
