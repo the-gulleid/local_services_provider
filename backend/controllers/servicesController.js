@@ -12,7 +12,7 @@ const getAllServices = async (req, res) => {
     res.status(400).json({
       success: false,
       message: `Error getting services, error:${error.message}`,
-      data: null,
+      data: [],
     });
   }
 };
@@ -40,7 +40,7 @@ const getOneService = async (req, res) => {
     res.status(400).json({
       success: false,
       message: `Error getting the service, error:${error.message}`,
-      data: null,
+      data: [],
     });
   }
 };
@@ -72,6 +72,7 @@ const createService = async (req, res) => {
     res.status(400).json({
       success: false,
       message: `Error during creating seervice, error:${error.message}`,
+      data: [],
     });
   }
 };
@@ -85,6 +86,7 @@ const updateService = async (req, res) => {
       return res.status(400).json({
         success: false,
         message: "Please provide a new name",
+        data: [],
       });
     }
 
@@ -100,6 +102,7 @@ const updateService = async (req, res) => {
       return res.status(404).json({
         success: false,
         message: "this service doesn't exist",
+        data: [],
       });
     }
 
@@ -112,6 +115,7 @@ const updateService = async (req, res) => {
     res.status(400).json({
       success: false,
       message: `Error updating the service, error:${error.message}`,
+      data: [],
     });
   }
 };

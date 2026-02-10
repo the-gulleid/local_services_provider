@@ -12,7 +12,7 @@ const getAllUsers = async (req, res) => {
     res.status(400).json({
       success: false,
       message: `Error getting all the users, error:${error.message}`,
-      data: null,
+      data: [],
     });
   }
 };
@@ -27,7 +27,7 @@ const getOneUser = async (req, res) => {
       return res.status(404).json({
         success: false,
         message: `user doesn't exist`,
-        data: null,
+        data: [],
       });
     }
     res.status(200).json({
@@ -39,7 +39,7 @@ const getOneUser = async (req, res) => {
     res.status(400).json({
       success: false,
       message: `Error getting the user, error:${error.message}`,
-      data: null,
+      data: [],
     });
   }
 };
@@ -54,7 +54,7 @@ const createUser = async (req, res) => {
       return res.status(400).json({
         success: false,
         message: `user already exist`,
-        data: null,
+        data: [],
       });
     }
     const newUser = await User.create({
@@ -76,7 +76,7 @@ const createUser = async (req, res) => {
     res.status(400).json({
       success: false,
       message: `Error creating new user, error:${error.message}`,
-      data: null,
+      data: [],
     });
   }
 };
@@ -90,7 +90,7 @@ const updateUser = async (req, res) => {
       return res.status(400).json({
         success: false,
         message: `please fill the data`,
-        data: null,
+        data: [],
       });
     }
 
@@ -104,7 +104,7 @@ const updateUser = async (req, res) => {
       return res.status(404).json({
         success: false,
         message: `user doesn't exist`,
-        data: null,
+        data: [],
       });
     }
     res.status(200).json({
@@ -116,7 +116,7 @@ const updateUser = async (req, res) => {
     res.status(400).json({
       success: false,
       message: `Error updating the user, error:${error.message}`,
-      data: null,
+      data: [],
     });
   }
 };
@@ -131,7 +131,7 @@ const deleteUser = async (req, res) => {
       return res.status(404).json({
         success: false,
         message: `user doesn't exist`,
-        data: null,
+        data: [],
       });
     }
     res.status(200).json({
@@ -143,7 +143,7 @@ const deleteUser = async (req, res) => {
     res.status(400).json({
       success: false,
       message: `Error deleting the user, error:${error.message}`,
-      data: null,
+      data: [],
     });
   }
 };
