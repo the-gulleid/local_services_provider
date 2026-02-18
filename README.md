@@ -44,7 +44,7 @@ ServiLink is built using the **MERN Stack** and deployed on **Railway**:
 - **API Testing:** Postman
 
  ## 4. Installation Instructions
-
+Step 1
 …cd servilink
 
 Step 2:Backend SetUp
@@ -62,9 +62,40 @@ npm run dev
 
 Frontend runs on http://localhost:5173
 
-5. Environment Variable Configuration    
-6.  API Endpoints Documentation
-7.  Implemented Features
+5. Environment Variable Configuration
+Create a .env file in backend root:
+PORT=3000
+6. API Endpoints Documentation
+Base URL: http://localhost:3000/api
+
+-**Auth**:
+POST /auth/register
+POST /auth/login
+GET /auth/me
+
+-**Users**:
+GET /users/profile
+POST /users/profile
+
+-**Bookings**:
+POST /bookings
+GET /bookings/my
+PUT /bookings/:id/accept
+PUT /bookings/:id/reject
+
+-**Providers**:
+POST /providers/profile
+GET /providers
+
+-**Services**:
+POST /services
+GET /services
+
+-**Reviews**:
+POST /reviews
+GET /reviews/service/:id
+
+8.  Implemented Features
 -Role-Based Access Control: Separate dashboards for Customers, Service Providers, and Administrators.
 -Secure Authentication: JWT-based login/register with password hashing (bcrypt).
 -Provider Verification: Admin approval system ensures only trusted providers are visible.
@@ -133,5 +164,6 @@ Based on our development roadmap and team feedback, the following enhancements a
 8. Conclusion
 
 ServiLink demonstrates a complete full-stack solution for solving real-world service discovery challenges. The project applies modern web technologies, clean architecture, and role-based system design to deliver a scalable, secure, and user-friendly platform suitable for real-world deployment.
+
 
 
