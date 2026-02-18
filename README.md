@@ -10,15 +10,15 @@ Submission Date: February 18, 2026
 ----
 Purpose:
  In today’s digital era, many essential daily services such as plumbing, electrical work, cleaning, and technical maintenance are still accessed through informal and inefficient methods.
- There is currently a significant lack of dedicated software platforms that effectively connect skilled service providers with customers in a structured, reliable, and transparent way. 
- As a result, customers struggle to find trustworthy professionals, while skilled workers face difficulties in reaching potential clients and growing their businesses.
- ServiLink is a web-based Local Service Provider System designed to bridge this gap by creating a centralized digital marketplace that connects customers with verified and
- skilled service providers. The platform enables users to easily discover services, compare providers, make bookings, track service progress, and provide feedback through ratings and
- reviews. At the same time, service providers can manage their profiles, showcase their skills, receive job requests, and build professional reputations.By digitalizing the entire service
- interaction process, ServiLink improves accessibility, efficiency, and trust for both customers and providers. The system not only simplifies service discovery and management 
- but also contributes to economic empowerment by giving skilled workers greater visibility and opportunities in the digital economy. 
+There is currently a significant lack of dedicated software platforms that effectively connect skilled service providers with customers in a structured, reliable, and transparent way. 
+As a result, customers struggle to find trustworthy professionals, while skilled workers face difficulties in reaching potential clients and growing their businesses.
+ServiLink is a web-based Local Service Provider System designed to bridge this gap by creating a centralized digital marketplace that connects customers with verified and
+skilled service providers. The platform enables users to easily discover services, compare providers, make bookings, track service progress, and provide feedback through ratings and
+reviews. At the same time, service providers can manage their profiles, showcase their skills, receive job requests, and build professional reputations.By digitalizing the entire service
+interaction process, ServiLink improves accessibility, efficiency, and trust for both customers and providers. The system not only simplifies service discovery and management 
+but also contributes to economic empowerment by giving skilled workers greater visibility and opportunities in the digital economy. 
 
- ## 2. Team Members with Assigned Roles
+## 2. Team Members with Assigned Roles
 
 | No | Name | Role |
 | :--- | :--- | :--- |
@@ -76,6 +76,7 @@ Frontend runs on http://localhost:5173
 -CORS Configuration: Configured for both localhost and Railway deployment domains.
 
 ------
+ ## 5. LINK AND DETAILED DOCUMENTATION FILE
 User Dashboard UI:
 https://tinyurl.com/servilink-user-UI
 
@@ -91,25 +92,25 @@ Github Repository Link: https://github.com/the-gulleid/local_services_provider/t
 
 ------
 
-10. Challenges Faced and Solutions
+ ## 6. Challenges Faced and Solutions
 CORS Configuration for Deployment
 Challenge: Initially, the frontend could not communicate with the backend after deployment due to Cross-Origin Resource Sharing restrictions.
 Solution: Configured Express CORS middleware to explicitly allow requests from both localhost and the Railway deployment domain.
 
-9.1: JWT Authentication & Role-Based Access
+6.1: JWT Authentication & Role-Based Access
 Challenge: Managing three different user roles (Customer, Provider, Admin) with secure access control was complex.
 Solution: Created a reusable roleMiddleware.js that verifies the JWT token and checks the user's role before granting access to protected routes.
-9.2:Database Relationship Complexity
+6.2:Database Relationship Complexity
 Challenge: Linking Users, ProviderProfiles, Bookings, and Reviews without creating circular dependencies.
 Solution: Used Mongoose ref fields with strategic indexing (e.g., compound index on booking.providerId + customerId) and .populate() for efficient data fetching.
-9.3: Booking State Management
+6.3: Booking State Management
 Challenge: Keeping the booking status synchronized between customer and provider dashboards in real-time.
 Solution: Implemented a clear state machine in the backend and used React Context API to propagate status updates instantly to the UI.
 
 
 -----
 
-10. Future Improvements
+7. Future Improvements
 Based on our development roadmap and team feedback, the following enhancements are planned for future versions of ServiLink:
 -AI-Powered Chatbot: Integrate an intelligent chatbot to assist customers in finding the right service providers based on natural language queries and automated support.
 -Real-Time Chat: Implement Socket.io for direct messaging between customers and providers for better coordination.
@@ -120,5 +121,6 @@ Based on our development roadmap and team feedback, the following enhancements a
 -Advanced Search & Filters: Add filters for price range, availability, and rating to improve service discovery.
 -Analytics Dashboard: Provide providers and admins with insights on bookings, earnings, and user engagement.
 
+8. Conclusion
 
-
+ServiLink demonstrates a complete full-stack solution for solving real-world service discovery challenges. The project applies modern web technologies, clean architecture, and role-based system design to deliver a scalable, secure, and user-friendly platform suitable for real-world deployment.
