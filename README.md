@@ -92,13 +92,21 @@ GET /reviews/service/:id
 
 ## 6.  Implemented Features
 -Role-Based Access Control: Separate dashboards for Customers, Service Providers, and Administrators.
+
 -Secure Authentication: JWT-based login/register with password hashing (bcrypt).
+
 -Provider Verification: Admin approval system ensures only trusted providers are visible.
+
 -Service Discovery: Browse services by category with detailed provider profiles.
+
 -Booking System: End-to-end booking flow (Pending → Accepted → Completed).
+
 -Reviews & Ratings: Customers can rate providers after completed bookings.
+
 -Responsive Design: Fully responsive UI for mobile and desktop using a single global CSS file.
+
 -Error Handling: Comprehensive backend error middleware and frontend validation.
+
 -CORS Configuration: Configured for both localhost and Railway deployment domains.
 
 ------
@@ -159,6 +167,7 @@ Based on our development roadmap and team feedback, the following enhancements a
 ## 10. Conclusion
 
 ServiLink demonstrates a complete full-stack solution for solving real-world service discovery challenges. The project applies modern web technologies, clean architecture, and role-based system design to deliver a scalable, secure, and user-friendly platform suitable for real-world deployment.
+
 
 
 
