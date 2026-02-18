@@ -1,5 +1,5 @@
 # ServiLink: A Local Service Marketplace Platform
-## 1. Project Title and Purpose
+### 1. Project Title and Purpose
 
 Project Name: ServiLink  
 Group Name:Innovators  
@@ -8,7 +8,7 @@ Instructor: Eng. Zakaria Mohamed
 Submission Date: February 18, 2026  
 
 ----
-Purpose:
+### Purpose:
  In today’s digital era, many essential daily services such as plumbing, electrical work, cleaning, and technical maintenance are still accessed through informal and inefficient methods.There is currently a significant lack of dedicated software platforms that effectively connect skilled service providers with customers in a structured, reliable, and transparent way. As a result, customers struggle to find trustworthy professionals, while skilled workers face difficulties in reaching potential clients and growing their businesses.
 ServiLink is a web-based Local Service Provider System designed to bridge this gap by creating a centralized digital marketplace that connects customers with verified andskilled service providers. The platform enables users to easily discover services, compare providers, make bookings, track service progress, and provide feedback through ratings andreviews. At the same time, service providers can manage their profiles, showcase their skills, receive job requests, and build professional reputations.By digitalizing the entire service
 interaction process, ServiLink improves accessibility, efficiency, and trust for both customers and providers. The system not only simplifies service discovery and management but also contributes to economic empowerment by giving skilled workers greater visibility and opportunities in the digital economy. 
@@ -159,6 +159,7 @@ Based on our development roadmap and team feedback, the following enhancements a
 ## 10. Conclusion
 
 ServiLink demonstrates a complete full-stack solution for solving real-world service discovery challenges. The project applies modern web technologies, clean architecture, and role-based system design to deliver a scalable, secure, and user-friendly platform suitable for real-world deployment.
+
 
 
 
