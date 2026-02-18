@@ -111,7 +111,9 @@ Solution: Implemented a clear state machine in the backend and used React Contex
 -----
 
 7. Future Improvements
+
 Based on our development roadmap and team feedback, the following enhancements are planned for future versions of ServiLink:
+
 -AI-Powered Chatbot: Integrate an intelligent chatbot to assist customers in finding the right service providers based on natural language queries and automated support.
 -Real-Time Chat: Implement Socket.io for direct messaging between customers and providers for better coordination.
 -Payment Integration: Integrate local payment solutions like Telesom ZAAD or Stripe for secure in-app transactions.
@@ -124,3 +126,4 @@ Based on our development roadmap and team feedback, the following enhancements a
 8. Conclusion
 
 ServiLink demonstrates a complete full-stack solution for solving real-world service discovery challenges. The project applies modern web technologies, clean architecture, and role-based system design to deliver a scalable, secure, and user-friendly platform suitable for real-world deployment.
+
