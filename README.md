@@ -9,14 +9,9 @@ Submission Date: February 18, 2026
 
 ----
 Purpose:
- In today’s digital era, many essential daily services such as plumbing, electrical work, cleaning, and technical maintenance are still accessed through informal and inefficient methods.
-There is currently a significant lack of dedicated software platforms that effectively connect skilled service providers with customers in a structured, reliable, and transparent way. 
-As a result, customers struggle to find trustworthy professionals, while skilled workers face difficulties in reaching potential clients and growing their businesses.
-ServiLink is a web-based Local Service Provider System designed to bridge this gap by creating a centralized digital marketplace that connects customers with verified and
-skilled service providers. The platform enables users to easily discover services, compare providers, make bookings, track service progress, and provide feedback through ratings and
-reviews. At the same time, service providers can manage their profiles, showcase their skills, receive job requests, and build professional reputations.By digitalizing the entire service
-interaction process, ServiLink improves accessibility, efficiency, and trust for both customers and providers. The system not only simplifies service discovery and management 
-but also contributes to economic empowerment by giving skilled workers greater visibility and opportunities in the digital economy. 
+ In today’s digital era, many essential daily services such as plumbing, electrical work, cleaning, and technical maintenance are still accessed through informal and inefficient methods.There is currently a significant lack of dedicated software platforms that effectively connect skilled service providers with customers in a structured, reliable, and transparent way. As a result, customers struggle to find trustworthy professionals, while skilled workers face difficulties in reaching potential clients and growing their businesses.
+ServiLink is a web-based Local Service Provider System designed to bridge this gap by creating a centralized digital marketplace that connects customers with verified andskilled service providers. The platform enables users to easily discover services, compare providers, make bookings, track service progress, and provide feedback through ratings andreviews. At the same time, service providers can manage their profiles, showcase their skills, receive job requests, and build professional reputations.By digitalizing the entire service
+interaction process, ServiLink improves accessibility, efficiency, and trust for both customers and providers. The system not only simplifies service discovery and management but also contributes to economic empowerment by giving skilled workers greater visibility and opportunities in the digital economy. 
 
 ## 2. Team Members with Assigned Roles
 
@@ -50,7 +45,7 @@ Step 1
 Step 2:Backend SetUp
 cd backend
 npm install
-# Create a .env file (see Environment Variables section)
+Create a .env file (see Environment Variables section)
 npm run dev
 Backend runs on http://localhost:5000
 
@@ -62,10 +57,10 @@ npm run dev
 
 Frontend runs on http://localhost:5173
 
-5. Environment Variable Configuration
+##5. Environment Variable Configuration
 Create a .env file in backend root:
 PORT=3000
-6. API Endpoints Documentation
+##6. API Endpoints Documentation
 Base URL: http://localhost:3000/api
 
 -**Auth**:
@@ -95,7 +90,7 @@ GET /services
 POST /reviews
 GET /reviews/service/:id
 
-8.  Implemented Features
+##6.  Implemented Features
 -Role-Based Access Control: Separate dashboards for Customers, Service Providers, and Administrators.
 -Secure Authentication: JWT-based login/register with password hashing (bcrypt).
 -Provider Verification: Admin approval system ensures only trusted providers are visible.
@@ -107,7 +102,7 @@ GET /reviews/service/:id
 -CORS Configuration: Configured for both localhost and Railway deployment domains.
 
 ------
- ## 5. LINK AND DETAILED DOCUMENTATION FILE
+##7. LINK AND DETAILED DOCUMENTATION FILE
 User Dashboard UI:
 https://tinyurl.com/servilink-user-UI
 
@@ -123,25 +118,25 @@ Github Repository Link: https://github.com/the-gulleid/local_services_provider/t
 
 ------
 
- ## 6. Challenges Faced and Solutions
+##8. Challenges Faced and Solutions
 CORS Configuration for Deployment
 Challenge: Initially, the frontend could not communicate with the backend after deployment due to Cross-Origin Resource Sharing restrictions.
 Solution: Configured Express CORS middleware to explicitly allow requests from both localhost and the Railway deployment domain.
 
-6.1: JWT Authentication & Role-Based Access
+8.1: JWT Authentication & Role-Based Access
 Challenge: Managing three different user roles (Customer, Provider, Admin) with secure access control was complex.
 Solution: Created a reusable roleMiddleware.js that verifies the JWT token and checks the user's role before granting access to protected routes.
-6.2:Database Relationship Complexity
+8.2:Database Relationship Complexity
 Challenge: Linking Users, ProviderProfiles, Bookings, and Reviews without creating circular dependencies.
 Solution: Used Mongoose ref fields with strategic indexing (e.g., compound index on booking.providerId + customerId) and .populate() for efficient data fetching.
-6.3: Booking State Management
+8.3: Booking State Management
 Challenge: Keeping the booking status synchronized between customer and provider dashboards in real-time.
 Solution: Implemented a clear state machine in the backend and used React Context API to propagate status updates instantly to the UI.
 
 
 -----
 
-7. Future Improvements
+9. Future Improvements
 
 Based on our development roadmap and team feedback, the following enhancements are planned for future versions of ServiLink:
 
@@ -161,9 +156,10 @@ Based on our development roadmap and team feedback, the following enhancements a
 
 -Analytics Dashboard: Provide providers and admins with insights on bookings, earnings, and user engagement.
 
-8. Conclusion
+10. Conclusion
 
 ServiLink demonstrates a complete full-stack solution for solving real-world service discovery challenges. The project applies modern web technologies, clean architecture, and role-based system design to deliver a scalable, secure, and user-friendly platform suitable for real-world deployment.
+
 
 
 
