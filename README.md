@@ -115,15 +115,23 @@ Solution: Implemented a clear state machine in the backend and used React Contex
 Based on our development roadmap and team feedback, the following enhancements are planned for future versions of ServiLink:
 
 -AI-Powered Chatbot: Integrate an intelligent chatbot to assist customers in finding the right service providers based on natural language queries and automated support.
+
 -Real-Time Chat: Implement Socket.io for direct messaging between customers and providers for better coordination.
+
 -Payment Integration: Integrate local payment solutions like Telesom ZAAD or Stripe for secure in-app transactions.
+
 -Push Notifications: Add email and SMS notifications using Nodemailer/Twilio to alert users about booking updates and approvals.
+
 -Map & Location Services: Integrate Google Maps or Mapbox to show provider locations and enable location-based search.
+
 -Mobile Application: Develop a React Native mobile app to provide on-the-go access for customers and providers.
+
 -Advanced Search & Filters: Add filters for price range, availability, and rating to improve service discovery.
+
 -Analytics Dashboard: Provide providers and admins with insights on bookings, earnings, and user engagement.
 
 8. Conclusion
 
 ServiLink demonstrates a complete full-stack solution for solving real-world service discovery challenges. The project applies modern web technologies, clean architecture, and role-based system design to deliver a scalable, secure, and user-friendly platform suitable for real-world deployment.
+
 
