@@ -40,22 +40,32 @@ ServiLink is built using the **MERN Stack** and deployed on **Railway**:
 
  ## 4. Installation Instructions
 Step 1
+..Copy Githup repository URL
+Then go to terminal,and then clone using the repository link URL,
+create new local folder for cloning,then open terminal
+Step 2:
 …cd servilink
+Step 3:
+...cd frontend
+Step 4:Final Step
+...then npm start
+youur frontend application will start running on port Frontend runs on http://localhost:5174
+
 
 Step 2:Backend SetUp
-cd backend
-npm install
-Create a .env file (see Environment Variables section)
-npm run dev
-Backend runs on http://localhost:5000
+...Open new terminal
+...type ls(to check if you have backend application)
+---type pwd(to locate to backend)
+...cd backend
+...type node server.js
+...Open Postman to check Api's
+..your backend application will run successfully on port:3000
 
-Step 3:Frontend Setup
---Open a new terminal--
-cd frontend
-npm install
-npm run dev
+Backend runs on http://localhost:3000
 
-Frontend runs on http://localhost:5173
+
+
+
 
  ## 5. Environment Variable Configuration
 Create a .env file in backend root:
@@ -167,6 +177,7 @@ Based on our development roadmap and team feedback, the following enhancements a
 ## 10. Conclusion
 
 ServiLink demonstrates a complete full-stack solution for solving real-world service discovery challenges. The project applies modern web technologies, clean architecture, and role-based system design to deliver a scalable, secure, and user-friendly platform suitable for real-world deployment.
+
 
 
 
